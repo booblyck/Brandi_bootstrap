@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600&family=Roboto&display=swap");
+body {
+  padding-top: 20px;
+  &:before {
+    z-index: 10001;
+    line-height: 20px;
+    font-weight: bold;
+    text-align: center;
+    position: fixed;
+    font-size: 20px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background: limegreen;
+    content: "Xsmall";
+  }
+  @include media-breakpoint-up(sm) {
+    &:before {
+      content: "small";
+      background: #f00;
+    }
+  }
+  @include media-breakpoint-up(md) {
+    font-size: $font-size-base;
+    &:before {
+      content: "middle";
+      background: green;
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    &:before {
+      content: "Large";
+      background: turquoise;
+    }
+  }
+  @include media-breakpoint-up(xl) {
+    &:before {
+      content: "XLarge";
+      background: #f09;
+    }
+  }
+  @include media-breakpoint-up(xxl) {
+    &:before {
+      content: "XXLarge";
+      background: #90f;
+    }
+  }
+}
+
+img {
+  width: 100%;
+  overflow: hidden;
+}
+
+.features {
+  background: #f4f7f9;
+  h2 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 800;
+    color: #0eb493;
+    position: relative;
+
+    margin-top: 70px;
+    margin-bottom: 100px;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 90px;
+      height: 1px;
+      background: #e6e8ea;
+      top: 60px;
+      left: calc(50% + 30px);
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      width: 90px;
+      height: 1px;
+      background: #e6e8ea;
+      top: 60px;
+      right: calc(50% + 30px);
+    }
+  }
+  h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #062033;
+  }
+  p {
+    color: #062033;
+  }
+  .feature-block {
+    margin-bottom: 130px;
+  }
+}
+
+.works {
+  h2 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 800;
+    color: #0eb493;
+    position: relative;
+
+    margin-top: 70px;
+    margin-bottom: 60px;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 90px;
+      height: 1px;
+      background: #e6e8ea;
+      top: 60px;
+      left: calc(50% + 30px);
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      width: 90px;
+      height: 1px;
+      background: #e6e8ea;
+      top: 60px;
+      right: calc(50% + 30px);
+    }
+  }
+  p {
+    text-align: center;
+    color: #062033;
+  }
+  nav {
+    .collapse {
+      display: flex;
+      justify-content: space-around;
+    }
+    .nav-item {
+      margin-right: 50px;
+      a {
+        font-weight: 700;
+        color: #062033;
+      }
+      .active {
+        color: #fff;
+        background: #27a284;
+        padding: 6px 20px;
+        border-radius: 7px;
+      }
+    }
+  }
+}
