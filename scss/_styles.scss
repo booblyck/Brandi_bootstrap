@@ -58,7 +58,21 @@ body {
   z-index: 3;
 
   .logo {
-    margin-left: 150px;
+    @include media-breakpoint-up(xs) {
+      margin-left: 20px;
+    }
+    @include media-breakpoint-up(md) {
+      margin-left: 50px;
+    }
+    @include media-breakpoint-up(lg) {
+      margin-left: 100px;
+    }
+    @include media-breakpoint-up(xl) {
+      margin-left: 120px;
+    }
+    @include media-breakpoint-up(xxl) {
+      margin-left: 150px;
+    }
   }
 
   .navigation {
@@ -78,19 +92,61 @@ body {
   }
 
   .slogan {
-    margin-top: 380px;
+    @include media-breakpoint-up(xs) {
+      margin-top: 50px;
+    }
+    @include media-breakpoint-up(md) {
+      margin-top: 100px;
+    }
+    @include media-breakpoint-up(lg) {
+      margin-top: 150px;
+    }
+    @include media-breakpoint-up(xl) {
+      margin-top: 250px;
+    }
+    @include media-breakpoint-up(xxl) {
+      margin-top: 380px;
+    }
   }
   span {
     text-align: center;
-    font-size: 62px;
     color: $white;
     font-weight: 300;
+    @include media-breakpoint-up(xs) {
+      font-size: 25px;
+    }
+    @include media-breakpoint-up(md) {
+      font-size: 32px;
+    }
+    @include media-breakpoint-up(lg) {
+      font-size: 42px;
+    }
+    @include media-breakpoint-up(xl) {
+      font-size: 52px;
+    }
+    @include media-breakpoint-up(xxl) {
+      font-size: 62px;
+    }
   }
   h1 {
     text-align: center;
-    font-size: 62px;
     color: $white;
     font-weight: 700;
+    @include media-breakpoint-up(xs) {
+      font-size: 25px;
+    }
+    @include media-breakpoint-up(md) {
+      font-size: 32px;
+    }
+    @include media-breakpoint-up(lg) {
+      font-size: 42px;
+    }
+    @include media-breakpoint-up(xl) {
+      font-size: 52px;
+    }
+    @include media-breakpoint-up(xxl) {
+      font-size: 62px;
+    }
   }
   .creative {
     color: #0feb9e;
@@ -133,11 +189,22 @@ body {
     }
   }
   .social-media-block {
-    padding-top: 150px;
     width: 150px;
     margin: auto;
     display: flex;
     justify-content: space-between;
+    @include media-breakpoint-up(xs) {
+      padding-top: 20px;
+    }
+    @include media-breakpoint-up(lg) {
+      padding-top: 70px;
+    }
+    @include media-breakpoint-up(xl) {
+      padding-top: 100px;
+    }
+    @include media-breakpoint-up(xxl) {
+      padding-top: 150px;
+    }
     li::marker {
       color: transparent;
       position: relative;
